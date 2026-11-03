@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>A Morriña — Café bar en Verín · Jazz, rock y música en directo</title>
+  <meta name="description" content="A Morriña, café bar familiar en la Avenida de Sousas, 56, Verín. Desayunos, croquetas y empanadas, ambiente de jazz y rock, conciertos en directo y mercadillos. Reservas: 606 08 89 60.">
+  <meta name="theme-color" content="#140d09">
+  <!-- Maqueta de demostración: fuera de Google hasta que A Morriña la apruebe -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="A Morriña">
+  <meta property="og:title" content="A Morriña — Café bar en Verín">
+  <meta property="og:description" content="Café bar familiar con ambiente de jazz y rock, conciertos en directo y mercadillos. Avenida de Sousas, 56, Verín.">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="gl_ES">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- Idioma guardado antes de pintar, para no ver un parpadeo -->
+  <script>
+    try {
+      var l = localStorage.getItem('lang');
+      if (l === 'es' || l === 'gl') { document.documentElement.dataset.lang = l; document.documentElement.lang = l; }
+    } catch (e) {}
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "A Morriña",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Avenida de Sousas, 56",
+      "addressLocality": "Verín",
+      "addressRegion": "Ourense",
+      "addressCountry": "ES"
+    },
+    "telephone": "+34606088960",
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "08:30", "closes": "15:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "18:30", "closes": "23:00" }
+    ],
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "106" },
+    "sameAs": ["https://www.instagram.com/a_morrina_verin/"]
+  }
+  </script>
+</head>
+<body>
+
+<!-- Iconos -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main"><span lang="es">Saltar al contenido</span><span lang="gl">Saltar ao contido</span></a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#inicio">A Morriña</a>
+
+    <nav class="nav" id="nav" data-label-es="Secciones" data-label-gl="Seccións" aria-label="Secciones">
+      <ul>
+        <li><a href="#nosotros"><span lang="es">Nosotros</span><span lang="gl">Nós</span></a></li>
+        <li><a href="#agenda"><span lang="es">Agenda</span><span lang="gl">Axenda</span></a></li>
+        <li><a href="#carta">Carta</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#opiniones"><span lang="es">Opiniones</span><span lang="gl">Opinións</span></a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="lang-switch" role="group" data-label-es="Idioma" data-label-gl="Lingua" aria-label="Idioma">
+      <button type="button" data-set-lang="es" aria-pressed="true" title="Castellano">ES</button>
+      <button type="button" data-set-lang="gl" aria-pressed="false" title="Galego">GL</button>
+    </div>
+
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">
+      <span class="menu-bars" aria-hidden="true"></span>
+      <span class="visually-hidden"><span lang="es">Menú</span><span lang="gl">Menú</span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ PORTADA ============ -->
+  <section class="hero" id="inicio" aria-labelledby="hero-title">
+    <div class="hero-record vinyl" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <p class="kicker">Café bar familiar · Verín</p>
+      <h1 class="hero-title" id="hero-title">
+        <span class="h1-a">A</span>
+        <span class="h1-main">Morriña</span>
+      </h1>
+      <p class="hero-genres">Café <span aria-hidden="true">✦</span> Jazz <span aria-hidden="true">✦</span> Rock</p>
+
+      <p class="hero-slogan">
+        <span lang="es">Desayunos, croquetas y música en directo</span>
+        <span lang="gl">Almorzos, croquetas e música en directo</span>
+        <span class="tag tag-draft">Borrador</span>
+      </p>
+
+      <a class="rating-pill" href="#opiniones">
+        <svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"/></svg>
+        <span lang="es">4,8 en Google · 106 opiniones</span>
+        <span lang="gl">4,8 en Google · 106 opinións</span>
+      </a>
+
+      <div class="hero-ctas">
+        <a class="btn btn-gold" href="tel:+34606088960">
+          <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+          <span lang="es">Llamar y reservar</span><span lang="gl">Chamar e reservar</span>
+        </a>
+        <a class="btn btn-ghost" href="#agenda">
+          <span lang="es">Ver la agenda</span><span lang="gl">Ver a axenda</span>
+        </a>
+      </div>
+    </div>
+
+    <p class="hero-note">
+      <span class="tag tag-pending"><span lang="es">Foto de portada pendiente</span><span lang="gl">Foto de portada pendente</span></span>
+    </p>
+  </section>
+
+  <!-- ============ SOBRE NOSOTROS ============ -->
+  <section class="section wood" id="nosotros" aria-labelledby="nosotros-title">
+    <div class="container about">
+      <figure class="ph ph-portrait about-photo">
+        <figcaption class="ph-label">
+          <svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg>
+          <span lang="es">Foto de Fran, Nuria y Lucía · pendiente</span>
+          <span lang="gl">Foto de Fran, Nuria e Lucía · pendente</span>
+        </figcaption>
+      </figure>
+
+      <div class="about-text">
+        <header class="section-head section-head--left">
+          <p class="kicker"><span lang="es">Sobre nosotros</span><span lang="gl">Sobre nós</span></p>
+          <h2 class="section-title" id="nosotros-title">
+            <span lang="es">Una familia, mucha música</span><span lang="gl">Unha familia, moita música</span>
+          </h2>
+          <span class="tag tag-draft">Borrador</span>
+        </header>
+
+        <p lang="es">A Morriña es un café bar familiar en la Avenida de Sousas, en Verín. Lo llevan Fran, Nuria y su hija Lucía.</p>
+        <p lang="gl">A Morriña é un café bar familiar na Avenida de Sousas, en Verín. Lévano Fran, Nuria e a súa filla Lucía.</p>
+
+        <p lang="es">El jazz y el rock marcan el ambiente y la decoración del local. Aquí puedes desayunar, tapear y escuchar buena música, y también venir a los conciertos en directo y a los mercadillos que organizamos.</p>
+        <p lang="gl">O jazz e o rock marcan o ambiente e a decoración do local. Aquí podes almorzar, tapear e escoitar boa música, e tamén vir aos concertos en directo e aos mercadiños que organizamos.</p>
+
+        <div class="pending-box">
+          <span class="tag tag-pending"><span lang="es">Pendiente</span><span lang="gl">Pendente</span></span>
+          <p lang="es">Nuestra historia: desde cuándo abrimos, cómo empezó todo y de dónde viene el nombre.</p>
+          <p lang="gl">A nosa historia: desde cando abrimos, como comezou todo e de onde vén o nome.</p>
+        </div>
+
+        <dl class="liner-notes">
+          <div>
+            <dt><span lang="es">La familia</span><span lang="gl">A familia</span></dt>
+            <dd><span lang="es">Fran, Nuria y Lucía</span><span lang="gl">Fran, Nuria e Lucía</span></dd>
+          </div>
+          <div>
+            <dt><span lang="es">Suena</span><span lang="gl">Soa</span></dt>
+            <dd><span lang="es">Jazz y rock</span><span lang="gl">Jazz e rock</span></dd>
+          </div>
+          <div>
+            <dt><span lang="es">Planes</span><span lang="gl">Plans</span></dt>
+            <dd><span lang="es">Conciertos en directo y mercadillos</span><span lang="gl">Concertos en directo e mercadiños</span></dd>
+          </div>
+          <div>
+            <dt>Para picar</dt>
+            <dd><span lang="es">Croquetas y empanadas</span><span lang="gl">Croquetas e empanadas</span></dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AGENDA ============ -->
+  <section class="section paper" id="agenda" aria-labelledby="agenda-title">
+    <div class="container">
+      <header class="section-head">
+        <p class="kicker">En directo</p>
+        <h2 class="section-title section-title--poster" id="agenda-title">
+          <span lang="es">Agenda</span><span lang="gl">Axenda</span>
+        </h2>
+        <p class="lead">
+          <span lang="es">Los próximos conciertos y mercadillos, de un vistazo.</span>
+          <span lang="gl">Os próximos concertos e mercadiños, dunha ollada.</span>
+        </p>
+        <span class="tag tag-pending"><span lang="es">Más fechas por confirmar</span><span lang="gl">Máis datas por confirmar</span></span>
+      </header>
+
+      <!-- data-until: el evento se oculta solo a partir del día siguiente -->
+      <ul class="tickets" role="list">
+        <li class="ticket-wrap" data-until="2026-11-07">
+          <article class="ticket">
+            <div class="ticket-stub ticket-stub--date" aria-hidden="true">
+              <span class="stub-dow">Sáb</span>
+              <span class="stub-day">7</span>
+              <span class="stub-month">Nov</span>
+            </div>
+            <div class="ticket-body">
+              <p class="ticket-type"><span lang="es">Concierto · Acid jazz</span><span lang="gl">Concerto · Acid jazz</span></p>
+              <h3 class="ticket-title">Lucas de Mulder</h3>
+              <p class="ticket-sub">Presenta <em>New Land</em></p>
+              <p class="ticket-meta">
+                <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>
+                <span lang="es">Sábado 7 de noviembre · 21:00</span><span lang="gl">Sábado 7 de novembro · 21:00</span>
+              </p>
+              <p class="ticket-meta ticket-meta--price">
+                <span lang="es">Taquilla inversa</span><span lang="gl">Billeteira inversa</span>
+              </p>
+            </div>
+          </article>
+        </li>
+        <li class="ticket-wrap">
+          <article class="ticket">
+            <div class="ticket-stub" aria-hidden="true">
+              <svg class="icon"><use href="#i-music"/></svg>
+              <span class="stub-text">En directo</span>
+            </div>
+            <div class="ticket-body">
+              <p class="ticket-type"><span lang="es">Concierto</span><span lang="gl">Concerto</span></p>
+              <h3 class="ticket-title">Artista por confirmar</h3>
+              <p class="ticket-meta">
+                <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>
+                <span lang="es">Fecha y hora por confirmar</span><span lang="gl">Data e hora por confirmar</span>
+              </p>
+            </div>
+          </article>
+        </li>
+        <li class="ticket-wrap">
+          <article class="ticket ticket--market">
+            <div class="ticket-stub" aria-hidden="true">
+              <svg class="icon"><use href="#i-bag"/></svg>
+              <span class="stub-text"><span lang="es">Mercadillo</span><span lang="gl">Mercadiño</span></span>
+            </div>
+            <div class="ticket-body">
+              <p class="ticket-type"><span lang="es">Mercadillo</span><span lang="gl">Mercadiño</span></p>
+              <h3 class="ticket-title">Detalles por confirmar</h3>
+              <p class="ticket-meta">
+                <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>
+                <span lang="es">Fecha y hora por confirmar</span><span lang="gl">Data e hora por confirmar</span>
+              </p>
+            </div>
+          </article>
+        </li>
+      </ul>
+
+      <!-- Eventos ya celebrados, del más reciente al más antiguo.
+           data-from: la fila aparece sola a partir de esa fecha. -->
+      <div class="past">
+        <h3 class="past-title">
+          <span lang="es">Ya pasaron por aquí</span><span lang="gl">Xa pasaron por aquí</span>
+          <span class="past-year">2026</span>
+        </h3>
+        <ol class="past-list" role="list">
+          <li data-from="2026-11-08" hidden>
+            <time class="past-date" datetime="2026-11-07">7 NOV</time>
+            <span class="past-name">Lucas de Mulder</span>
+            <span class="past-note">Presenta <em>New Land</em></span>
+          </li>
+          <li>
+            <time class="past-date" datetime="2026-10-24">24 <span lang="es">OCT</span><span lang="gl">OUT</span></time>
+            <span class="past-name">Fito Mansilla</span>
+            <span class="past-note">Cantautor</span>
+          </li>
+          <li>
+            <time class="past-date" datetime="2026-09"><span lang="es">SEP</span><span lang="gl">SET</span></time>
+            <span class="past-name">Robert Pier</span>
+            <span class="past-note">Presenta <em>Todo Sanará</em></span>
+          </li>
+          <li>
+            <time class="past-date" datetime="2026-09-24">24 <span lang="es">SEP</span><span lang="gl">SET</span></time>
+            <span class="past-name">Lisi Da Silva</span>
+            <span class="past-note"><span lang="es">Presentación del libro</span><span lang="gl">Presentación do libro</span> <em>Rotas y valientes</em></span>
+          </li>
+          <li>
+            <time class="past-date" datetime="2026-08-29">29 AGO</time>
+            <span class="past-name">School Nirvana Tribute</span>
+            <span class="past-note">Tributo a Nirvana en acústico</span>
+          </li>
+          <li>
+            <time class="past-date" datetime="2026-05-23">23 <span lang="es">MAY</span><span lang="gl">MAI</span></time>
+            <span class="past-name">Ejazz</span>
+          </li>
+          <li>
+            <time class="past-date" datetime="2026-04-25">25 ABR</time>
+            <span class="past-name">Valentín Caamaño Quartet</span>
+          </li>
+          <li>
+            <time class="past-date" datetime="2026-04-11">11 ABR</time>
+            <span class="past-name">Habló Pablo</span>
+            <span class="past-note">Rap</span>
+          </li>
+          <li>
+            <time class="past-date" datetime="2026-04-04">4 ABR</time>
+            <span class="past-name">Mabel Flores</span>
+          </li>
+          <li>
+            <time class="past-date" datetime="2026-01-10">10 <span lang="es">ENE</span><span lang="gl">XAN</span></time>
+            <span class="past-name">Enrique Octavo</span>
+            <span class="past-note">Indie rock de Granada</span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="section-cta">
+        <a class="btn btn-ink" href="https://www.instagram.com/a_morrina_verin/" target="_blank" rel="noopener">
+          <svg class="icon" aria-hidden="true"><use href="#i-insta"/></svg>
+          <span lang="es">Síguenos en Instagram</span><span lang="gl">Síguenos en Instagram</span>
+        </a>
+        <p class="handle">@a_morrina_verin</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CARTA ============ -->
+  <section class="section wood wood--dark" id="carta" aria-labelledby="carta-title">
+    <div class="container">
+      <header class="section-head">
+        <p class="kicker"><span lang="es">Para comer y picar</span><span lang="gl">Para comer e picar</span></p>
+        <h2 class="section-title" id="carta-title">Carta</h2>
+        <p class="lead">
+          <span lang="es">Desayunos, tapas, croquetas y empanadas.</span>
+          <span lang="gl">Almorzos, tapas, croquetas e empanadas.</span>
+        </p>
+        <span class="tag tag-pending"><span lang="es">Platos y precios por confirmar</span><span lang="gl">Pratos e prezos por confirmar</span></span>
+      </header>
+
+      <div class="menu-board">
+        <article class="menu-cat">
+          <h3><span lang="es">Desayunos</span><span lang="gl">Almorzos</span></h3>
+          <p class="badge">Destacado en Google</p>
+          <ul class="menu-list" role="list">
+            <li class="menu-row"><span class="menu-name">Por confirmar</span><span class="dots" aria-hidden="true"></span><span class="menu-price">— €</span></li>
+            <li class="menu-row"><span class="menu-name">Por confirmar</span><span class="dots" aria-hidden="true"></span><span class="menu-price">— €</span></li>
+            <li class="menu-row"><span class="menu-name">Por confirmar</span><span class="dots" aria-hidden="true"></span><span class="menu-price">— €</span></li>
+          </ul>
+        </article>
+
+        <article class="menu-cat">
+          <h3>Croquetas</h3>
+          <p class="badge">Destacado en Google</p>
+          <ul class="menu-list" role="list">
+            <li class="menu-row"><span class="menu-name">Por confirmar</span><span class="dots" aria-hidden="true"></span><span class="menu-price">— €</span></li>
+            <li class="menu-row"><span class="menu-name">Por confirmar</span><span class="dots" aria-hidden="true"></span><span class="menu-price">— €</span></li>
+            <li class="menu-row"><span class="menu-name">Por confirmar</span><span class="dots" aria-hidden="true"></span><span class="menu-price">— €</span></li>
+          </ul>
+        </article>
+
+        <article class="menu-cat">
+          <h3>Empanadas</h3>
+          <p class="badge">Destacado en Google</p>
+          <ul class="menu-list" role="list">
+            <li class="menu-row"><span class="menu-name">Por confirmar</span><span class="dots" aria-hidden="true"></span><span class="menu-price">— €</span></li>
+            <li class="menu-row"><span class="menu-name">Por confirmar</span><span class="dots" aria-hidden="true"></span><span class="menu-price">— €</span></li>
+            <li class="menu-row"><span class="menu-name">Por confirmar</span><span class="dots" aria-hidden="true"></span><span class="menu-price">— €</span></li>
+          </ul>
+        </article>
+
+        <article class="menu-cat">
+          <h3>Tapas</h3>
+          <ul class="menu-list" role="list">
+            <li class="menu-row"><span class="menu-name">Por confirmar</span><span class="dots" aria-hidden="true"></span><span class="menu-price">— €</span></li>
+            <li class="menu-row"><span class="menu-name">Por confirmar</span><span class="dots" aria-hidden="true"></span><span class="menu-price">— €</span></li>
+            <li class="menu-row"><span class="menu-name">Por confirmar</span><span class="dots" aria-hidden="true"></span><span class="menu-price">— €</span></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALERÍA ============ -->
+  <section class="section" id="galeria" aria-labelledby="galeria-title">
+    <div class="container">
+      <header class="section-head">
+        <p class="kicker"><span lang="es">El local</span><span lang="gl">O local</span></p>
+        <h2 class="section-title" id="galeria-title">Galería</h2>
+        <p class="lead">
+          <span lang="es">Fotos del local, la música y la cocina.</span>
+          <span lang="gl">Fotos do local, a música e a cociña.</span>
+        </p>
+      </header>
+
+      <ul class="gallery" role="list">
+        <li class="ph g1 pat-sunburst">
+          <span class="ph-label"><svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg>
+            <span lang="es">Foto pendiente · Fachada</span><span lang="gl">Foto pendente · Fachada</span></span>
+        </li>
+        <li class="ph g2 pat-keys">
+          <span class="ph-label"><svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg>
+            <span lang="es">Foto pendiente · Interior</span><span lang="gl">Foto pendente · Interior</span></span>
+        </li>
+        <li class="ph g3 pat-grooves">
+          <span class="ph-label"><svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg>
+            <span lang="es">Foto pendiente · Concierto</span><span lang="gl">Foto pendente · Concerto</span></span>
+        </li>
+        <li class="ph g4 pat-deco">
+          <span class="ph-label"><svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg>
+            <span lang="es">Foto pendiente · Croquetas</span><span lang="gl">Foto pendente · Croquetas</span></span>
+        </li>
+        <li class="ph g5 pat-keys">
+          <span class="ph-label"><svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg>
+            <span lang="es">Foto pendiente · Desayuno</span><span lang="gl">Foto pendente · Almorzo</span></span>
+        </li>
+        <li class="ph g6 pat-sunburst">
+          <span class="ph-label"><svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg>
+            <span lang="es">Foto pendiente · Mercadillo</span><span lang="gl">Foto pendente · Mercadiño</span></span>
+        </li>
+      </ul>
+
+      <div class="section-cta">
+        <a class="btn btn-ghost" href="https://www.instagram.com/a_morrina_verin/" target="_blank" rel="noopener">
+          <svg class="icon" aria-hidden="true"><use href="#i-insta"/></svg>
+          <span lang="es">Ver más en Instagram</span><span lang="gl">Ver máis en Instagram</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OPINIONES ============ -->
+  <section class="section paper" id="opiniones" aria-labelledby="opiniones-title">
+    <div class="container">
+      <header class="section-head">
+        <p class="kicker">Google</p>
+        <h2 class="section-title" id="opiniones-title">
+          <span lang="es">Opiniones</span><span lang="gl">Opinións</span>
+        </h2>
+      </header>
+
+      <div class="score">
+        <p class="score-number">4,8</p>
+        <div class="score-detail">
+          <div class="stars" role="img" data-label-es="4,8 de 5 estrellas" data-label-gl="4,8 de 5 estrelas" aria-label="4,8 de 5 estrellas">
+            <span class="stars-base" aria-hidden="true">★★★★★</span>
+            <span class="stars-fill" aria-hidden="true" style="width:96%">★★★★★</span>
+          </div>
+          <p class="score-count"><span lang="es">106 opiniones en Google</span><span lang="gl">106 opinións en Google</span></p>
+        </div>
+      </div>
+
+      <p class="chips-title"><span lang="es">Lo que más destacan</span><span lang="gl">O que máis destacan</span></p>
+      <ul class="chips" role="list">
+        <li>Croquetas</li>
+        <li>Empanadas</li>
+        <li><span lang="es">Desayunos</span><span lang="gl">Almorzos</span></li>
+        <li><span lang="es">El trato</span><span lang="gl">O trato</span></li>
+      </ul>
+
+      <ul class="reviews" role="list">
+        <li class="review-ph">
+          <span class="quote-mark" aria-hidden="true">“</span>
+          <p><span lang="es">Opinión destacada de un cliente</span><span lang="gl">Opinión destacada dun cliente</span></p>
+          <span class="tag tag-pending"><span lang="es">Pendiente</span><span lang="gl">Pendente</span></span>
+        </li>
+        <li class="review-ph">
+          <span class="quote-mark" aria-hidden="true">“</span>
+          <p><span lang="es">Opinión destacada de un cliente</span><span lang="gl">Opinión destacada dun cliente</span></p>
+          <span class="tag tag-pending"><span lang="es">Pendiente</span><span lang="gl">Pendente</span></span>
+        </li>
+        <li class="review-ph">
+          <span class="quote-mark" aria-hidden="true">“</span>
+          <p><span lang="es">Opinión destacada de un cliente</span><span lang="gl">Opinión destacada dun cliente</span></p>
+          <span class="tag tag-pending"><span lang="es">Pendiente</span><span lang="gl">Pendente</span></span>
+        </li>
+      </ul>
+
+      <div class="section-cta">
+        <a class="btn btn-ink" href="https://www.google.com/maps/search/?api=1&amp;query=A%20Morri%C3%B1a%20Avenida%20de%20Sousas%2056%20Ver%C3%ADn" target="_blank" rel="noopener">
+          <svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"/></svg>
+          <span lang="es">Leer las opiniones en Google</span><span lang="gl">Ler as opinións en Google</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACTO ============ -->
+  <section class="section wood" id="contacto" aria-labelledby="contacto-title">
+    <div class="container">
+      <header class="section-head">
+        <p class="kicker">Visítanos</p>
+        <h2 class="section-title" id="contacto-title">Contacto</h2>
+        <p class="lead">
+          <span lang="es">Reserva por teléfono o escríbenos por WhatsApp.</span>
+          <span lang="gl">Reserva por teléfono ou escríbenos por WhatsApp.</span>
+        </p>
+      </header>
+
+      <div class="contact">
+        <div class="contact-info">
+          <ul class="info-list" role="list">
+            <li>
+              <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+              <div>
+                <p class="info-label"><span lang="es">Dirección</span><span lang="gl">Enderezo</span></p>
+                <p>Avenida de Sousas, 56<br>Verín (Ourense)</p>
+              </div>
+            </li>
+            <li>
+              <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+              <div>
+                <p class="info-label">Reservas</p>
+                <p><a href="tel:+34606088960">606 08 89 60</a></p>
+              </div>
+            </li>
+            <li>
+              <svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>
+              <div>
+                <p class="info-label">WhatsApp</p>
+                <p><a href="https://wa.me/34606088960" target="_blank" rel="noopener">606 08 89 60</a></p>
+              </div>
+            </li>
+            <li>
+              <svg class="icon" aria-hidden="true"><use href="#i-insta"/></svg>
+              <div>
+                <p class="info-label">Instagram</p>
+                <p><a href="https://www.instagram.com/a_morrina_verin/" target="_blank" rel="noopener">@a_morrina_verin</a></p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="hours">
+            <h3 class="hours-title">
+              <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>
+              Horario
+            </h3>
+            <p class="open-status" data-open-status aria-live="polite"></p>
+            <table class="hours-table">
+              <tbody>
+                <tr>
+                  <th scope="row"><span lang="es">Lunes a sábado</span><span lang="gl">Luns a sábado</span></th>
+                  <td>8:30 – 15:00<br>18:30 – 23:00</td>
+                </tr>
+                <tr>
+                  <th scope="row">Domingo</th>
+                  <td><span lang="es">Cerrado</span><span lang="gl">Pechado</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="contact-ctas">
+            <a class="btn btn-gold" href="tel:+34606088960">
+              <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+              <span lang="es">Llamar</span><span lang="gl">Chamar</span>
+            </a>
+            <a class="btn btn-ghost" href="https://wa.me/34606088960" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>
+              WhatsApp
+            </a>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Avenida%20de%20Sousas%2056%2C%20Ver%C3%ADn" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+              <span lang="es">Cómo llegar</span><span lang="gl">Como chegar</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="map-frame">
+          <iframe
+            src="https://maps.google.com/maps?q=Avenida%20de%20Sousas%2056%2C%20Ver%C3%ADn%2C%20Ourense&amp;z=16&amp;output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            data-title-es="Mapa: Avenida de Sousas, 56, Verín"
+            data-title-gl="Mapa: Avenida de Sousas, 56, Verín"
+            title="Mapa: Avenida de Sousas, 56, Verín"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="footer-brand">A Morriña</p>
+    <p>Café bar familiar · Avenida de Sousas, 56 · Verín</p>
+    <p class="footer-links">
+      <a href="tel:+34606088960">606 08 89 60</a>
+      <span aria-hidden="true">·</span>
+      <a href="https://www.instagram.com/a_morrina_verin/" target="_blank" rel="noopener">@a_morrina_verin</a>
+    </p>
+    <p class="footer-note">
+      <span lang="es">Maqueta de demostración: textos y fotos provisionales.</span>
+      <span lang="gl">Maqueta de demostración: textos e fotos provisionais.</span>
+    </p>
+  </div>
+</footer>
+
+<!-- Barra de acciones fija (solo móvil) -->
+<nav class="action-bar" data-label-es="Acciones rápidas" data-label-gl="Accións rápidas" aria-label="Acciones rápidas">
+  <a href="tel:+34606088960">
+    <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+    <span lang="es">Llamar</span><span lang="gl">Chamar</span>
+  </a>
+  <a href="https://wa.me/34606088960" target="_blank" rel="noopener">
+    <svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>
+    WhatsApp
+  </a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Avenida%20de%20Sousas%2056%2C%20Ver%C3%ADn" target="_blank" rel="noopener">
+    <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+    <span lang="es">Cómo llegar</span><span lang="gl">Como chegar</span>
+  </a>
+</nav>
+
+</body>
+</html>
